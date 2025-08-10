@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+}
+.indexByd {
+  background-image: url("../img/my.png");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: -7%;
+  background-size: 350px ;  
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 72px;
+  font-family: "Barlow", sans-serif, "微軟正黑體";
+  text-align: center;
+  color: #66c9c5;
+  font-weight: 900;
+  font-style: italic;
+  text-shadow: 4px 4px #6157b4;
+}
+.main {
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+.card {
+  background-color: #fbfbfb;
+}
+.card ul {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 56px 0;
+}
+.card ul li {
+  width: 300px;
+  margin: 10px 15px;
+}
+.card ul li a {
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card ul li a img {
+  width: 100%;
+  height: 180px;
+  display: block;
+  object-fit: cover;
+}
+.card ul li > img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.card ul li p {
+  padding: 0 10px;
+}
+.card ul li p span {
+  color: #ffffff;
+  background-color: #66c9c5;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 15px;
+
+}
+@media (max-width: 700px) {
+  .indexByd {
+  background-position-x: 130%;
+  }
+}
+@media (max-width: 600px) {
+  .indexByd {
+  background-position-x: 150%;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  .card ul {
+    padding: 32px 0;
+  }
+}
+
+footer {
+  border-top: 1px solid #efefef;
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;
+  color: #999;
+}

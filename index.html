@@ -6,6 +6,44 @@
     <title>Sean</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="icon" href="./img/titleImg.png" type="image/x-icon" />
+    <style>
+      /* 新增的圖片放大樣式 */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      
+      .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        pointer-events: none;
+      }
+      
+      /* 針對廣告製圖的圖片添加指針樣式 */
+      .card ul li:not(:has(a)) img {
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+        height: auto; /* 改為自動高度，保持原始比例 */
+        max-height: none; /* 移除最大高度限制 */
+        object-fit: contain; /* 保持完整內容 */
+        border-radius: 12px;
+      }
+      
+      .card ul li:not(:has(a)) img:hover {
+        opacity: 0.8;
+      }
+    </style>
   </head>
   <body class="indexByd">
     <div class="main">
@@ -37,16 +75,47 @@
             <p>修圖 - <span>點圖進入<span></span></p>
           </li>
           <li>
-            <img src="./img/AD-1.jpg" alt="" />
+            <img src="./img/AD-1.jpg" alt="廣告製圖-1" class="zoomable-img" />
             <p>廣告製圖-1</p>
           </li>
           <li>
-            <img src="./img/AD-2.jpg" alt="" />
+            <img src="./img/AD-2.jpg" alt="廣告製圖-2" class="zoomable-img" />
             <p>廣告製圖-2</p>
           </li>
         </ul>
       </div>
     </div>
+    
+    <!-- 新增的 modal 結構 -->
+    <div id="imageModal" class="modal">
+      <img class="modal-content" id="expandedImg">
+    </div>
+    
     <footer>個人作品集</footer>
+    
+    <script>
+      // 圖片放大功能
+      document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('expandedImg');
+        const zoomableImgs = document.querySelectorAll('.zoomable-img');
+        
+        // 為每個可放大的圖片添加點擊事件
+        zoomableImgs.forEach(img => {
+          img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+          });
+        });
+        
+        // 點擊 modal 背景關閉
+        modal.addEventListener('click', function() {
+          modal.style.display = 'none';
+        });
+      });
+    </script>
   </body>
 </html>
+

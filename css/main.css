@@ -79,6 +79,8 @@ h1 {
 @media (max-width: 600px) {
   .indexByd {
   background-position-x: 150%;
+  background-position-y: -1%;
+  background-size: 200px;
   }
   h1 {
     font-size: 48px;

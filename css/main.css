@@ -7,8 +7,8 @@ body {
   background-image: url("../img/my.png");
   background-repeat: no-repeat;
   background-position-x: 100%;
-  background-position-y: -7%;
-  background-size: 350px ;  
+  background-position-y: -2%;
+  background-size: 300px ;  
 }
 a {
   text-decoration: none;

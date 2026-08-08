@@ -22,6 +22,10 @@ h1 {
   font-style: italic;
   text-shadow: 4px 4px #6157b4;
 }
+.rearrange {
+  text-align: center;
+  color: #333;
+}
 .main {
   box-sizing: border-box;
   margin-top: 100px;

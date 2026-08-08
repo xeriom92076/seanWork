@@ -7,7 +7,7 @@ body {
   background-image: url("../img/my.png");
   background-repeat: no-repeat;
   background-position-x: 100%;
-  background-position-y: 0;
+  background-position-y: -1%;
   background-size: 300px ;  
 }
 a {
@@ -26,6 +26,8 @@ h1 {
   text-align: center;
   color: #333;
   font-size: 20px;
+  margin: 0;
+  padding-top: 15px;
 }
 .main {
   box-sizing: border-box;
@@ -82,9 +84,10 @@ h1 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 674px) {
   .indexByd {
   background-position-x: 120%;
+  background-position-y: -0.5%;
   background-size: 220px;
   }
   h1 {
